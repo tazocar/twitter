@@ -7,6 +7,7 @@ btn.addEventListener('click', add);
 function add(){
 	//tomando contenido de textarea
 	var comment = document.getElementById("text").value;
+	//si cumple con la condición, continúa con la fcn
 	if (comment.length > 0 && comment.length < 141) {
 		//limpio el textarea
 		document.getElementById("text").value = "";
@@ -18,8 +19,10 @@ function add(){
 		document.getElementById("text").style.cssText = "height: auto;";
 		//Reseteo Contador
 		var element = document.getElementById('counter');
-		//Reseteo mi
+		//Reseteo mi contador
 		element.innerHTML = 140;
+
+		btn.removeAttribute("style", "cursor")
 		//creo una variable que diriga a mi section
 		var containerComments = document.getElementById("container-comments")
 		//creo un nuevo Div para el comentario
@@ -90,8 +93,6 @@ function add(){
 		heart.addEventListener('click', function(){
 			heart.classList.toggle('red')
 		})
-
-
 	}	
 }
 
@@ -118,7 +119,7 @@ function counter(){
 	var element = document.getElementById('counter');
 	//el contenido de mi span = 140 - largo de mi value
 	element.innerHTML = 140 - textCont.value.length;
-	//cambios de color segun largo del value
+	//cambios de color segun largo del value, para que al borrar no sse equivoque de colores ni con el btn
 	if (element.innerHTML < 140 && element.innerHTML > 19) {
 		element.style.cssText = "color: #69CBF8;";
 		btn.style.cssText = "cursor: pointer; background: #69CBF8;";

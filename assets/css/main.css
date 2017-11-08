@@ -140,6 +140,7 @@ textarea{
 	overflow: hidden;
 	height: auto;
 	resize: none;
+	outline: none;
 }
 
 .comment{
@@ -159,6 +160,7 @@ textarea{
 	font-size: .9em;
 	margin: 0;
 	word-wrap: break-word;
+	vertical-align: middle;
 }
 .comment h5{
 	width: 60px;
@@ -197,6 +199,7 @@ textarea{
 	letter-spacing: 2px;
 	border-radius: 50px;
 	transition: background ease .5s;
+	outline: none;
 }
 
 #btn-register:hover{
@@ -208,7 +211,7 @@ textarea{
 	border-radius: 100%;
 	background: pink;
 	display: inline-block;
-	vertical-align: text-bottom;
+	vertical-align: middle;
 	margin: 6px;
 }
 .icons{
