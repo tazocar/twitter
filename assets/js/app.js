@@ -107,7 +107,7 @@ function autosize(){
   	element.style.cssText = 'height:auto; padding:0';
   	//hago que el alto cambie según el alto del contenido del input (scrollHeight)
     element.style.cssText = 'height:' + element.scrollHeight + 'px';
-  });
+  },0);
 }
 
 //llamo a mi input
