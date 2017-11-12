@@ -108,15 +108,15 @@ function add(){
 //llamo al input
 var element = document.getElementById('text');
 //le agrego un evento que llame a la función resize
+//keyup y keydown para que el cambio de tamaño en el input se analice en los 2 casos
 element.addEventListener('keydown', autosize);
+element.addEventListener('keyup', autosize);
 //Función que cambia el tamaño del input
 function autosize(){
-  setTimeout(function(){
   	//le doy alto inline (dentro del html)
   	element.style.cssText = 'height:auto; padding:0';
   	//hago que el alto cambie según el alto del contenido del input (scrollHeight)
     element.style.cssText = 'height:' + element.scrollHeight + 'px';
-  },0);
 }
 
 //llamo a mi input
