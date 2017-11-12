@@ -218,6 +218,7 @@ textarea{
 	display: inline-block;
 	width: 80px;
 	clear: both;
+	padding-left: 10px;
 }
 .fa.fa-heart{
 	font-size: 20px;
@@ -229,9 +230,15 @@ textarea{
 	margin: 4px;
 	cursor: pointer;
 }
-
+.icons .fa:hover{
+	color: #69CBF8;
+}
 .red{
 	color: #e5003a;
 	transition: color ease .3s;
 	cursor: pointer;
+}
+#time-size{
+	font-size: .8em;
+	color: #585f78;
 }

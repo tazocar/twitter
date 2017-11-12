@@ -60,9 +60,15 @@ function add(){
 		var trash = document.createElement("i");
 		trash.classList.add("fa", "fa-trash", "trash");
 
+		var postTime = document.createElement("p");
+		var textTime = document.createTextNode(moment().format('LT'));
+		postTime.appendChild(textTime);
+		postTime.id = "time-size";
+
 		divIcons.appendChild(heart);
 		divIcons.appendChild(trash);
 		divIcons.appendChild(check);
+		divIcons.appendChild(postTime);
 		
 		
 
