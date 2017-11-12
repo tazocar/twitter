@@ -22,9 +22,12 @@ function add(){
 		//Reseteo mi contador
 		element.innerHTML = 140;
 
-		btn.removeAttribute("style", "cursor")
-		//creo una variable que diriga a mi section
-		var containerComments = document.getElementById("container-comments")
+		btn.removeAttribute("style", "cursor");
+		//creo mi section para los comentarios
+		var postSection = document.getElementById("post-section");
+		var containerComments = document.createElement("div");
+		containerComments.setAttribute("id", "container-comments");
+		postSection.appendChild(containerComments);
 		//creo un nuevo Div para el comentario
 		var newComment = document.createElement("div");
 		//agrego la clase "comment" a mi div
